@@ -1,0 +1,235 @@
+#wrapper {
+  overflow-x: hidden;
+}
+
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  -webkit-transition: margin 0.25s ease-out;
+  -moz-transition: margin 0.25s ease-out;
+  -o-transition: margin 0.25s ease-out;
+  transition: margin 0.25s ease-out;
+  background-color: #304255;
+  background-image: linear-gradient(#3c4e68, #293747);
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #5bf7ea;
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+#sidebar-wrapper .sidebar-link {
+  color: rgb(208, 208, 208);
+}
+
+#sidebar-wrapper .sidebar-link.active,
+#sidebar-wrapper .sidebar-link:hover {
+  color: #5bf7ea;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+#wrapper #menu-toggle {
+  display: flex;
+  position: absolute;
+  z-index: 100;
+  padding: 12px;
+  padding-top: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #666666 !important;
+}
+
+.navbar {
+  z-index: 1 !important;
+}
+
+.navbar-text-color {
+  color: #666666 !important;
+}
+
+.nav-search {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  /* flex-direction: column; */
+}
+
+.nav-search {
+  color: #666666 !important;
+}
+.sidebar-content {
+  background-color: #eef2f3;
+  height: 100vh;
+  overflow: auto;
+}
+
+#menu-toggle:hover {
+  opacity: 0.9;
+  background-color: rgb(230, 230, 230);
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  overflow: auto;
+  text-align: center;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 360px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.chart-container {
+  min-height: 630px;
+}
+
+.dashboard-card {
+  min-height: 280px;
+}
+
+.dashboard-card .content {
+  height: 230px;
+  overflow: auto;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.custom-tabs {
+  position: absolute;
+  top: -28px;
+  left: 12px;
+  right: 12px;
+  background-color: #2bbbad;
+  padding: 4px 12px;
+}
+
+.custom-tabs .selected {
+  background-color: #009281 !important;
+}
+
+.custom-dropdown {
+  min-width: 100px;
+  display: inline-block;
+  z-index: 1000 !important;
+}
+
+.custom-dropdown .custom-list {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.custom-dropdown .custom-list a {
+  display: block;
+  padding: 0 4px;
+  z-index: 1000;
+}
+
+.custom-dropdown .custom-list a:hover {
+  background-color: rgb(204, 204, 204);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.task-card {
+  height: 260px;
+  z-index: 1 !important;
+}
+
+.task-card .description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  height: 120px;
+  overflow: hidden;
+}
+
+.task-card .title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

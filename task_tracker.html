@@ -1,0 +1,384 @@
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./index.css" />
+    <script
+      src="https://kit.fontawesome.com/f1752edda4.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    />
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Material Design Bootstrap -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+      <div class="d-flex" id="wrapper">
+        <div class="border-right morpheus-den-gradient" id="sidebar-wrapper">
+          <div class="sidebar-heading">ANALYTICS WEB APP</div>
+          <div class="list-group mt-3">
+            <a class="py-2 px-3 sidebar-link" href="/index.html"
+              ><i
+                class="fas fa-tachometer-alt d-inline-block mx-2"
+                aria-hidden="true"
+              ></i
+              >Dashboard</a
+            ><a class="py-2 px-3 sidebar-link" href="/reports.html"
+              ><i
+                class="fas fa-chart-pie d-inline-block mx-2"
+                aria-hidden="true"
+              ></i
+              >Reports</a
+            ><a class="py-2 px-3 sidebar-link active" href="/task_tracker.html"
+              ><i
+                class="fas fa-list-alt d-inline-block mx-2"
+                aria-hidden="true"
+              ></i
+              >Task Tracker</a
+            ><a class="py-2 px-3 sidebar-link" href="/login.html"
+              ><i
+                class="fas fa-sign-out-alt d-inline-block mx-2"
+                aria-hidden="true"
+              ></i
+              >Signout</a
+            >
+          </div>
+        </div>
+        <div id="page-content-wrapper" class="position-relative">
+          <span class="" id="menu-toggle"
+            ><i class="fas fa-chevron-left" aria-hidden="true"></i
+          ></span>
+          <div class="sidebar-content pb-3">
+            <nav
+              class="navbar sticky-top navbar-expand-sm navbar-light shadow-none bg-white p-0"
+            >
+              <div class="md-form my-0 ml-5 pl-3 nav-search">
+                <i data-test="fa" class="fa fa-search" aria-hidden="true"></i
+                ><input
+                  class="form-control form-control-sm ml-3 w-75"
+                  type="text"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+              </div>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"
+                      ><i
+                        class="fas fa-bell navbar-text-color"
+                        aria-hidden="true"
+                      ></i
+                      ><span class="d-inline-block d-sm-none ml-2"
+                        >Notifications</span
+                      ><span class="sr-only">(current)</span></a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"
+                      ><i
+                        class="fas fa-envelope navbar-text-color"
+                        aria-hidden="true"
+                      ></i
+                      ><span class="d-inline-block d-sm-none ml-2"
+                        >Messages</span
+                      ><span class="sr-only">(current)</span></a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"
+                      ><i
+                        class="fas fa-user navbar-text-color"
+                        aria-hidden="true"
+                      ></i
+                      ><span class="d-inline-block d-sm-none ml-2">Profile</span
+                      ><span class="sr-only">(current)</span></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <div
+              class="container py-2 px-3 rounded pt-3 mt-4 d-flex flex-wrap justify-content-between align-items-center"
+            >
+              <div>
+                <i class="fas fa-th mr-2 cursor-pointer" aria-hidden="true"></i
+                ><i class="fas fa-list grey-text" aria-hidden="true"></i>
+              </div>
+              <div class="d-flex flex-wrap cursor-pointer align-items-center">
+                <div class="custom-dropdown position-relative mr-1">
+                  <small class="grey-text">Client</small>
+                  <div
+                    class="d-flex justify-content-between mr-3 cursor-pointer"
+                  >
+                    <small class="blue-gray-text font-weight-bold"
+                      >All Client</small
+                    ><i class="fas fa-caret-down" aria-hidden="true"></i>
+                  </div>
+                </div>
+                <div class="custom-dropdown position-relative mr-1">
+                  <small class="grey-text">Label</small>
+                  <div
+                    class="d-flex justify-content-between mr-3 cursor-pointer"
+                  >
+                    <small class="blue-gray-text font-weight-bold"
+                      >All Label</small
+                    ><i class="fas fa-caret-down" aria-hidden="true"></i>
+                  </div>
+                </div>
+                <div class="custom-dropdown position-relative mr-1">
+                  <small class="grey-text">Category</small>
+                  <div
+                    class="d-flex justify-content-between mr-3 cursor-pointer"
+                  >
+                    <small class="blue-gray-text font-weight-bold"
+                      >All Category</small
+                    ><i class="fas fa-caret-down" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div data-test="container" class="container">
+              <div data-test="row" class="row">
+                <div data-test="col" class="col-md-3">
+                  <div class="bg-white py-2 px-3 shadow rounded mt-4 task-card">
+                    <div
+                      class="d-flex justify-content-between align-items-center mb-2"
+                    >
+                      <span class="float-left font-weight-bold"
+                        ><span class="blue-grey-text title"
+                          >Deploy Build</span
+                        ></span
+                      ><small class="float-right text-black-50">Ongoing</small>
+                    </div>
+                    <p class="grey-text description">
+                      <small
+                        >Deploy version 1.0.2 to Appstore and Playstore</small
+                      >
+                    </p>
+                    <img
+                      src="images/grid.png"
+                      width="32px"
+                      height="32px"
+                      class="rounded-pill mx-1"
+                    /><img
+                      src="images/juan.png"
+                      width="32px"
+                      height="32px"
+                      class="rounded-pill mx-1"
+                    /><img
+                      src="images/user.png"
+                      width="32px"
+                      height="32px"
+                      class="rounded-pill mx-1"
+                    />
+                    <div class="mt-3 clearfix">
+                      <small class="text-black-50 float-left"
+                        >Recently active</small
+                      ><i
+                        class="fas fa-star float-right yellow-text"
+                        aria-hidden="true"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+                <div data-test="col" class="col-md-3">
+                  <div class="bg-white py-2 px-3 shadow rounded mt-4 task-card">
+                    <div
+                      class="d-flex justify-content-between align-items-center mb-2"
+                    >
+                      <span class="float-left font-weight-bold"
+                        ><span class="blue-grey-text title"
+                          >Update Client X</span
+                        ></span
+                      ><small class="float-right text-black-50"
+                        >Completed</small
+                      >
+                    </div>
+                    <p class="grey-text description">
+                      <small>Notify client x about the proposal </small>
+                    </p>
+                    <img
+                      src="images/grid.png"
+                      width="32px"
+                      height="32px"
+                      class="rounded-pill mx-1"
+                    /><img
+                      src="images/user.png"
+                      width="32px"
+                      height="32px"
+                      class="rounded-pill mx-1"
+                    />
+                    <div class="mt-3 clearfix">
+                      <small class="text-black-50 float-left">5 hours ago</small
+                      ><i
+                        class="far fa-star float-right yellow-text"
+                        aria-hidden="true"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+                <div data-test="col" class="col-md-3">
+                  <div class="bg-white py-2 px-3 shadow rounded mt-4 task-card">
+                    <div
+                      class="d-flex justify-content-between align-items-center mb-2"
+                    >
+                      <span class="float-left font-weight-bold"
+                        ><span class="blue-grey-text title"
+                          >Fix Bugs</span
+                        ></span
+                      ><small class="float-right text-black-50">Pending</small>
+                    </div>
+                    <p class="grey-text description">
+                      <small
+                        >Fix mobile responsiveness bug in task tracker
+                        page</small
+                      >
+                    </p>
+                    <img
+                      src="images/grid.png"
+                      width="32px"
+                      height="32px"
+                      class="rounded-pill mx-1"
+                    /><img
+                      src="images/juan.png"
+                      width="32px"
+                      height="32px"
+                      class="rounded-pill mx-1"
+                    /><img
+                      src="images/user.png"
+                      width="32px"
+                      height="32px"
+                      class="rounded-pill mx-1"
+                    />
+                    <div class="mt-3 clearfix">
+                      <small class="text-black-50 float-left">Yesterday</small
+                      ><i
+                        class="far fa-star float-right yellow-text"
+                        aria-hidden="true"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+                <div data-test="col" class="col-md-3">
+                  <div class="bg-white py-2 px-3 shadow rounded mt-4 task-card">
+                    <div
+                      class="d-flex justify-content-between align-items-center mb-2"
+                    >
+                      <span class="float-left font-weight-bold"
+                        ><span class="blue-grey-text title"
+                          >This is a long title just for testing</span
+                        ></span
+                      ><small class="float-right text-black-50">Pending</small>
+                    </div>
+                    <p class="grey-text description">
+                      <small
+                        >Adipisicing veniam veniam occaecat do dolore. Cupidatat
+                        cillum sint pariatur do aliqua velit ex in laborum ipsum
+                        nulla sit velit.
+                      </small>
+                    </p>
+                    <img
+                      src="images/grid.png"
+                      width="32px"
+                      height="32px"
+                      class="rounded-pill mx-1"
+                    /><img
+                      src="images/juan.png"
+                      width="32px"
+                      height="32px"
+                      class="rounded-pill mx-1"
+                    /><img
+                      src="images/user.png"
+                      width="32px"
+                      height="32px"
+                      class="rounded-pill mx-1"
+                    />
+                    <div class="mt-3 clearfix">
+                      <small class="text-black-50 float-left">Yesterday</small
+                      ><i
+                        class="far fa-star float-right yellow-text"
+                        aria-hidden="true"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+                <div data-test="col" class="col-md-3">
+                  <div class="bg-white py-2 px-3 shadow rounded mt-4 task-card">
+                    <div
+                      class="d-flex justify-content-between align-items-center mb-2"
+                    >
+                      <span class="float-left font-weight-bold"
+                        ><span class="blue-grey-text title"
+                          >This is a long title just for testing</span
+                        ></span
+                      ><small class="float-right text-black-50">Pending</small>
+                    </div>
+                    <p class="grey-text description">
+                      <small
+                        >Adipisicing veniam veniam occaecat do dolore.
+                        Reprehenderit ipsum quis et enim Lorem ut cillum. Enim
+                        laborum reprehenderit irure exercitation cillum eiusmod
+                        non irure nisi non.</small
+                      >
+                    </p>
+                    <img
+                      src="images/grid.png"
+                      width="32px"
+                      height="32px"
+                      class="rounded-pill mx-1"
+                    /><img
+                      src="images/juan.png"
+                      width="32px"
+                      height="32px"
+                      class="rounded-pill mx-1"
+                    /><img
+                      src="images/user.png"
+                      width="32px"
+                      height="32px"
+                      class="rounded-pill mx-1"
+                    />
+                    <div class="mt-3 clearfix">
+                      <small class="text-black-50 float-left">Yesterday</small
+                      ><i
+                        class="far fa-star float-right yellow-text"
+                        aria-hidden="true"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

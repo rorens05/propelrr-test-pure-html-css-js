@@ -1,0 +1,444 @@
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./index.css" />
+    <script
+      src="https://kit.fontawesome.com/f1752edda4.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    />
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Material Design Bootstrap -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root">
+      <div>
+        <div class="d-flex" id="wrapper">
+          <div class="border-right morpheus-den-gradient" id="sidebar-wrapper">
+            <div class="sidebar-heading">ANALYTICS WEB APP</div>
+            <div class="list-group mt-3">
+              <a class="py-2 px-3 sidebar-link" href="/index.html"
+                ><i
+                  class="fas fa-tachometer-alt d-inline-block mx-2"
+                  aria-hidden="true"
+                ></i
+                >Dashboard</a
+              ><a class="py-2 px-3 sidebar-link active" href="/reports.html"
+                ><i
+                  class="fas fa-chart-pie d-inline-block mx-2"
+                  aria-hidden="true"
+                ></i
+                >Reports</a
+              ><a class="py-2 px-3 sidebar-link" href="/task_tracker.html"
+                ><i
+                  class="fas fa-list-alt d-inline-block mx-2"
+                  aria-hidden="true"
+                ></i
+                >Task Tracker</a
+              ><a class="py-2 px-3 sidebar-link" href="/login.html"
+                ><i
+                  class="fas fa-sign-out-alt d-inline-block mx-2"
+                  aria-hidden="true"
+                ></i
+                >Signout</a
+              >
+            </div>
+          </div>
+          <div id="page-content-wrapper" class="position-relative">
+            <span class="" id="menu-toggle"
+              ><i class="fas fa-chevron-left" aria-hidden="true"></i
+            ></span>
+            <div class="sidebar-content pb-3">
+              <nav
+                class="navbar sticky-top navbar-expand-sm navbar-light shadow-none bg-white p-0"
+              >
+                <div class="md-form my-0 ml-5 pl-3 nav-search">
+                  <i data-test="fa" class="fa fa-search" aria-hidden="true"></i
+                  ><input
+                    class="form-control form-control-sm ml-3 w-75"
+                    type="text"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                </div>
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div
+                  class="collapse navbar-collapse"
+                  id="navbarSupportedContent"
+                >
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"
+                        ><i
+                          class="fas fa-bell navbar-text-color"
+                          aria-hidden="true"
+                        ></i
+                        ><span class="d-inline-block d-sm-none ml-2"
+                          >Notifications</span
+                        ><span class="sr-only">(current)</span></a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"
+                        ><i
+                          class="fas fa-envelope navbar-text-color"
+                          aria-hidden="true"
+                        ></i
+                        ><span class="d-inline-block d-sm-none ml-2"
+                          >Messages</span
+                        ><span class="sr-only">(current)</span></a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"
+                        ><i
+                          class="fas fa-user navbar-text-color"
+                          aria-hidden="true"
+                        ></i
+                        ><span class="d-inline-block d-sm-none ml-2"
+                          >Profile</span
+                        ><span class="sr-only">(current)</span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+              <div data-test="container" class="container">
+                <div
+                  class="bg-white py-2 px-3 shadow rounded pt-3 mt-5 position-relative"
+                >
+                  <div class="custom-tabs rounded">
+                    <button
+                      data-test="button"
+                      type="button"
+                      class="btn-default btn Ripple-parent btn-sm shadow-none selected"
+                    >
+                      Users
+                      <div
+                        data-test="waves"
+                        class="Ripple"
+                        style="top: 0px; left: 0px; width: 0px; height: 0px"
+                      ></div></button
+                    ><button
+                      data-test="button"
+                      type="button"
+                      class="btn-default btn Ripple-parent btn-sm shadow-none"
+                    >
+                      Sales
+                      <div
+                        data-test="waves"
+                        class="Ripple"
+                        style="top: 0px; left: 0px; width: 0px; height: 0px"
+                      ></div></button
+                    ><button
+                      data-test="button"
+                      type="button"
+                      class="btn-default btn Ripple-parent btn-sm shadow-none"
+                    >
+                      Network
+                      <div
+                        data-test="waves"
+                        class="Ripple"
+                        style="top: 0px; left: 0px; width: 0px; height: 0px"
+                      ></div></button
+                    ><button
+                      data-test="button"
+                      type="button"
+                      class="btn-default btn Ripple-parent btn-sm shadow-none"
+                    >
+                      Customers
+                      <div
+                        data-test="waves"
+                        class="Ripple"
+                        style="top: 0px; left: 0px; width: 0px; height: 0px"
+                      ></div>
+                    </button>
+                  </div>
+                  <div class="mt-4">
+                    <div
+                      data-test="datatable"
+                      class="dataTables_wrapper dt-bootstrap4"
+                    >
+                      <div class="row">
+                        <div
+                          data-test="datatable-entries"
+                          class="col-sm-12 col-md-6"
+                          style="display: flex; align-items: center"
+                        >
+                          <div
+                            data-test="datatable-select"
+                            class="dataTables_length bs-select"
+                          >
+                            <label
+                              >Show entries<select
+                                class="custom-select custom-select-sm form-control form-control-sm"
+                                style="margin-left: 0.5rem"
+                              >
+                                <option value="10">10</option>
+                                <option value="20">20</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                              </select></label
+                            >
+                          </div>
+                        </div>
+                        <div
+                          data-test="datatable-search"
+                          class="col-sm-12 col-md-6"
+                          style="
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-end;
+                          "
+                        >
+                          <div
+                            data-test="datatable-input"
+                            class="mdb-datatable-filter flex-row"
+                          >
+                            <input
+                              class="form-control form-control-sm ml-0 my-1"
+                              type="text"
+                              placeholder="Search"
+                              aria-label="Search"
+                              value=""
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div data-test="datatable-table" class="col-sm-12">
+                          <div data-test="table" class="">
+                            <table
+                              entries="10"
+                              class="table table-bordered table-sm table-striped dataTable"
+                            >
+                              <thead data-test="datatable-head">
+                                <tr>
+                                  <th class="sorting">Name</th>
+                                  <th class="sorting">Position</th>
+                                  <th class="sorting">Office</th>
+                                  <th class="sorting">Age</th>
+                                  <th class="sorting">Start date</th>
+                                  <th class="sorting">Salary</th>
+                                </tr>
+                              </thead>
+                              <tbody data-test="table-body">
+                                <tr>
+                                  <td>Tiger Nixon</td>
+                                  <td>System Architect</td>
+                                  <td>Edinburgh</td>
+                                  <td>61</td>
+                                  <td>2011/04/25</td>
+                                  <td>$320</td>
+                                </tr>
+                                <tr>
+                                  <td>Garrett Winters</td>
+                                  <td>Accountant</td>
+                                  <td>Tokyo</td>
+                                  <td>63</td>
+                                  <td>2011/07/25</td>
+                                  <td>$170</td>
+                                </tr>
+                                <tr>
+                                  <td>Ashton Cox</td>
+                                  <td>Junior Technical Author</td>
+                                  <td>San Francisco</td>
+                                  <td>66</td>
+                                  <td>2009/01/12</td>
+                                  <td>$86</td>
+                                </tr>
+                                <tr>
+                                  <td>Cedric Kelly</td>
+                                  <td>Senior Javascript Developer</td>
+                                  <td>Edinburgh</td>
+                                  <td>22</td>
+                                  <td>2012/03/29</td>
+                                  <td>$433</td>
+                                </tr>
+                                <tr>
+                                  <td>Airi Satou</td>
+                                  <td>Accountant</td>
+                                  <td>Tokyo</td>
+                                  <td>33</td>
+                                  <td>2008/11/28</td>
+                                  <td>$162</td>
+                                </tr>
+                                <tr>
+                                  <td>Brielle Williamson</td>
+                                  <td>Integration Specialist</td>
+                                  <td>New York</td>
+                                  <td>61</td>
+                                  <td>2012/12/02</td>
+                                  <td>$372</td>
+                                </tr>
+                                <tr>
+                                  <td>Herrod Chandler</td>
+                                  <td>Sales Assistant</td>
+                                  <td>San Francisco</td>
+                                  <td>59</td>
+                                  <td>2012/08/06</td>
+                                  <td>$137</td>
+                                </tr>
+                                <tr>
+                                  <td>Rhona Davidson</td>
+                                  <td>Integration Specialist</td>
+                                  <td>Tokyo</td>
+                                  <td>55</td>
+                                  <td>2010/10/14</td>
+                                  <td>$327</td>
+                                </tr>
+                                <tr>
+                                  <td>Colleen Hurst</td>
+                                  <td>Javascript Developer</td>
+                                  <td>San Francisco</td>
+                                  <td>39</td>
+                                  <td>2009/09/15</td>
+                                  <td>$205</td>
+                                </tr>
+                                <tr>
+                                  <td>Sonya Frost</td>
+                                  <td>Software Engineer</td>
+                                  <td>Edinburgh</td>
+                                  <td>23</td>
+                                  <td>2008/12/13</td>
+                                  <td>$103</td>
+                                </tr>
+                              </tbody>
+                              <thead data-test="table-foot">
+                                <tr>
+                                  <th>Name</th>
+                                  <th>Position</th>
+                                  <th>Office</th>
+                                  <th>Age</th>
+                                  <th>Start date</th>
+                                  <th>Salary</th>
+                                </tr>
+                              </thead>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div
+                          data-test="datatable-info"
+                          class="col-sm-12 col-md-5"
+                        >
+                          <div
+                            class="dataTables_info"
+                            role="status"
+                            aria-live="polite"
+                          >
+                            Showing 1 to 10 of 57 entries
+                          </div>
+                        </div>
+                        <div
+                          data-test="datatable-pagination"
+                          class="col-sm-12 col-md-7"
+                        >
+                          <div class="dataTables_paginate">
+                            <ul data-test="pagination" class="pagination">
+                              <li
+                                data-test="page-item"
+                                class="disabled page-item"
+                              >
+                                <a
+                                  data-test="page-link"
+                                  aria-label="Previous"
+                                  class="page-link page-link"
+                                  ><span>Previous</span></a
+                                >
+                              </li>
+                              <li
+                                data-test="page-item"
+                                class="active page-item"
+                              >
+                                <a
+                                  data-test="page-link"
+                                  class="page-link page-link"
+                                  >1<span class="sr-only">(current)</span></a
+                                >
+                              </li>
+                              <li data-test="page-item" class="page-item">
+                                <a
+                                  data-test="page-link"
+                                  class="page-link page-link"
+                                  >2</a
+                                >
+                              </li>
+                              <li data-test="page-item" class="page-item">
+                                <a
+                                  data-test="page-link"
+                                  class="page-link page-link"
+                                  >3</a
+                                >
+                              </li>
+                              <li data-test="page-item" class="page-item">
+                                <a
+                                  data-test="page-link"
+                                  class="page-link page-link"
+                                  >4</a
+                                >
+                              </li>
+                              <li data-test="page-item" class="page-item">
+                                <a
+                                  data-test="page-link"
+                                  class="page-link page-link"
+                                  >5</a
+                                >
+                              </li>
+                              <li data-test="page-item" class="page-item">
+                                <a
+                                  data-test="page-link"
+                                  class="page-link page-link"
+                                  >6</a
+                                >
+                              </li>
+                              <li data-test="page-item" class="page-item">
+                                <a
+                                  data-test="page-link"
+                                  aria-label="Next"
+                                  class="page-link page-link"
+                                  ><span>Next</span></a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

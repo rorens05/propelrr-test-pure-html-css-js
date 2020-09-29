@@ -1,0 +1,574 @@
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./index.css" />
+    <script
+      src="https://kit.fontawesome.com/f1752edda4.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    />
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Material Design Bootstrap -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css"
+      rel="stylesheet"
+    />
+    <!-- Chart JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
+      integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"
+      integrity="sha512-G8JE1Xbr0egZE5gNGyUm1fF764iHVfRXshIoUWCTPAbKkkItp/6qal5YAHXrxEu4HNfPTQs6HOu3D5vCGS1j3w=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"
+      integrity="sha512-vBmx0N/uQOXznm/Nbkp7h0P1RfLSj0HQrFSzV8m7rOGyj30fYAOKHYvCNez+yM8IrfnW0TCodDEjRqf6fodf/Q=="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.css"
+      integrity="sha512-SUJFImtiT87gVCOXl3aGC00zfDl6ggYAw5+oheJvRJ8KBXZrr/TMISSdVJ5bBarbQDRC2pR5Kto3xTR0kpZInA=="
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"
+      integrity="sha512-QEiC894KVkN9Tsoi6+mKf8HaCLJvyA6QIRzY5KrfINXYuP9NxdIkRQhGq3BZi0J4I7V5SidGM3XUQ5wFiMDuWg=="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css"
+      integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w=="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="d-flex" id="wrapper">
+      <div class="border-right morpheus-den-gradient" id="sidebar-wrapper">
+        <div class="sidebar-heading">ANALYTICS WEB APP</div>
+        <div class="list-group mt-3">
+          <a class="py-2 px-3 sidebar-link active" href="/index.html"
+            ><i
+              class="fas fa-tachometer-alt d-inline-block mx-2"
+              aria-hidden="true"
+            ></i
+            >Dashboard</a
+          ><a class="py-2 px-3 sidebar-link" href="/reports.html"
+            ><i
+              class="fas fa-chart-pie d-inline-block mx-2"
+              aria-hidden="true"
+            ></i
+            >Reports</a
+          ><a class="py-2 px-3 sidebar-link" href="/task_tracker.html"
+            ><i
+              class="fas fa-list-alt d-inline-block mx-2"
+              aria-hidden="true"
+            ></i
+            >Task Tracker</a
+          ><a class="py-2 px-3 sidebar-link" href="/login.html"
+            ><i
+              class="fas fa-sign-out-alt d-inline-block mx-2"
+              aria-hidden="true"
+            ></i
+            >Signout</a
+          >
+        </div>
+      </div>
+      <div id="page-content-wrapper" class="position-relative">
+        <span class="" id="menu-toggle"
+          ><i class="fas fa-chevron-left" aria-hidden="true"></i
+        ></span>
+        <div class="sidebar-content pb-3">
+          <nav
+            class="navbar sticky-top navbar-expand-sm navbar-light shadow-none bg-white p-0"
+          >
+            <div class="md-form my-0 ml-5 pl-3 nav-search">
+              <i data-test="fa" class="fa fa-search" aria-hidden="true"></i
+              ><input
+                class="form-control form-control-sm ml-3 w-75"
+                type="text"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </div>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i
+                      class="fas fa-bell navbar-text-color"
+                      aria-hidden="true"
+                    ></i
+                    ><span class="d-inline-block d-sm-none ml-2"
+                      >Notifications</span
+                    ><span class="sr-only">(current)</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i
+                      class="fas fa-envelope navbar-text-color"
+                      aria-hidden="true"
+                    ></i
+                    ><span class="d-inline-block d-sm-none ml-2">Messages</span
+                    ><span class="sr-only">(current)</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i
+                      class="fas fa-user navbar-text-color"
+                      aria-hidden="true"
+                    ></i
+                    ><span class="d-inline-block d-sm-none ml-2">Profile</span
+                    ><span class="sr-only">(current)</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div data-test="container" class="container">
+            <div data-test="row" class="row">
+              <div data-test="col" class="col-md-3">
+                <div class="bg-white py-2 px-3 shadow rounded mt-4">
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <span class="float-left font-weight-bold"
+                      ><i
+                        class="fas fa-chart-line blue-text d-inline-block mr-2"
+                        aria-hidden="true"
+                      ></i
+                      ><span class="blue-grey-text">Sales</span></span
+                    ><small class="float-right text-black-50">Monthly</small>
+                  </div>
+                  <h3 class="blue-text mt-3">PHP 122,500</h3>
+                </div>
+              </div>
+              <div data-test="col" class="col-md-3">
+                <div class="bg-white py-2 px-3 shadow rounded mt-4">
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <span class="float-left font-weight-bold"
+                      ><i
+                        class="fas fa-dollar-sign green-text d-inline-block mr-2"
+                        aria-hidden="true"
+                      ></i
+                      ><span class="blue-grey-text">Revenue</span></span
+                    ><small class="float-right text-black-50">Monthly</small>
+                  </div>
+                  <h3 class="green-text mt-3">PHP 122,500</h3>
+                </div>
+              </div>
+              <div data-test="col" class="col-md-3">
+                <div class="bg-white py-2 px-3 shadow rounded mt-4">
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <span class="float-left font-weight-bold"
+                      ><i
+                        class="fas fa-exclamation-circle red-text d-inline-block mr-2"
+                        aria-hidden="true"
+                      ></i
+                      ><span class="blue-grey-text">Lost Sales</span></span
+                    ><small class="float-right text-black-50">Monthly</small>
+                  </div>
+                  <h3 class="red-text mt-3">PHP 122,500</h3>
+                </div>
+              </div>
+              <div data-test="col" class="col-md-3">
+                <div class="bg-white py-2 px-3 shadow rounded mt-4">
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <span class="float-left font-weight-bold"
+                      ><i
+                        class="fas fa-bell text-info d-inline-block mr-2"
+                        aria-hidden="true"
+                      ></i
+                      ><span class="blue-grey-text">Active users</span></span
+                    ><small class="float-right text-black-50">Today</small>
+                  </div>
+                  <h3 class="text-info mt-3">248</h3>
+                </div>
+              </div>
+            </div>
+            <div data-test="row" class="row">
+              <div data-test="col" class="col-md-8">
+                <div
+                  data-test="container"
+                  class="container bg-white py-2 px-3 shadow rounded pt-3 chart-container mt-4"
+                >
+                  <div class="chartjs-size-monitor">
+                    <div class="chartjs-size-monitor-expand">
+                      <div class=""></div>
+                    </div>
+                    <div class="chartjs-size-monitor-shrink">
+                      <div class=""></div>
+                    </div>
+                  </div>
+                  <h4 class="font-weight-bold blue-grey-text">
+                    Sales for the last 6 months
+                  </h4>
+                  <hr class="mb-2" />
+                  <button
+                    data-test="button"
+                    type="button"
+                    class="btn-info btn Ripple-parent btn-sm rounded-pill shadow-none border"
+                  >
+                    Last 30 Days
+                    <div
+                      data-test="waves"
+                      class="Ripple"
+                      style="top: 0px; left: 0px; width: 0px; height: 0px"
+                    ></div></button
+                  ><button
+                    data-test="button"
+                    type="button"
+                    class="btn-none btn Ripple-parent btn-sm rounded-pill shadow-none border"
+                  >
+                    Last 3 Months
+                    <div
+                      data-test="waves"
+                      class="Ripple"
+                      style="top: 0px; left: 0px; width: 0px; height: 0px"
+                    ></div></button
+                  ><button
+                    data-test="button"
+                    type="button"
+                    class="btn-none btn Ripple-parent btn-sm rounded-pill shadow-none border"
+                  >
+                    Last 6 Months
+                    <div
+                      data-test="waves"
+                      class="Ripple"
+                      style="top: 0px; left: 0px; width: 0px; height: 0px"
+                    ></div></button
+                  ><canvas
+                    id="salesChart"
+                    height="416"
+                    width="625"
+                    class="chartjs-render-monitor"
+                    style="display: block; width: 625px; height: 416px"
+                  ></canvas>
+                </div>
+              </div>
+              <div data-test="col" class="col-md-4">
+                <div
+                  data-test="container"
+                  class="container bg-white py-2 px-3 shadow rounded pt-3 chart-container mt-4"
+                >
+                  <div class="chartjs-size-monitor">
+                    <div class="chartjs-size-monitor-expand">
+                      <div class=""></div>
+                    </div>
+                    <div class="chartjs-size-monitor-shrink">
+                      <div class=""></div>
+                    </div>
+                  </div>
+                  <h4 class="font-weight-bold blue-grey-text">Popular</h4>
+                  <hr />
+                  <canvas
+                    id="popularChart"
+                    height="206"
+                    width="282"
+                    class="chartjs-render-monitor"
+                    style="display: block; width: 282px; height: 206px"
+                  ></canvas>
+                  <h5 class="blue-grey-text mt-3">Details</h5>
+                  <div data-test="table" class="">
+                    <table class="table table-hover">
+                      <thead data-test="table-head" class="">
+                        <tr>
+                          <th>Service</th>
+                          <th>%</th>
+                        </tr>
+                      </thead>
+                      <tbody data-test="table-body">
+                        <tr>
+                          <td class="py-2">Mobile</td>
+                          <td class="py-2">22</td>
+                        </tr>
+                        <tr>
+                          <td class="py-2">Web</td>
+                          <td class="py-2">35</td>
+                        </tr>
+                        <tr>
+                          <td class="py-2">Desktop</td>
+                          <td class="py-2">8</td>
+                        </tr>
+                        <tr>
+                          <td class="py-2">SEO</td>
+                          <td class="py-2">15</td>
+                        </tr>
+                        <tr>
+                          <td class="py-2">IOT</td>
+                          <td class="py-2">20</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div data-test="row" class="row">
+              <div data-test="col" class="col-md-3">
+                <div
+                  class="bg-white py-2 px-3 shadow rounded mt-4 dashboard-card"
+                >
+                  <div class="chartjs-size-monitor">
+                    <div class="chartjs-size-monitor-expand">
+                      <div class=""></div>
+                    </div>
+                    <div class="chartjs-size-monitor-shrink">
+                      <div class=""></div>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-2"
+                  >
+                    <span class="float-left font-weight-bold"
+                      ><span class="blue-grey-text">Sales Goal</span></span
+                    ><small class="float-right text-black-50">Daily</small>
+                  </div>
+                  <canvas
+                    id="salesGoalChart"
+                    height="130"
+                    width="196"
+                    class="chartjs-render-monitor"
+                    style="display: block; width: 196px; height: 130px"
+                  ></canvas>
+                  <h3 class="text-center mt-1 green-text">75%</h3>
+                  <span class="text-center d-block mt-1 blue-gray-text"
+                    >256 Sales</span
+                  >
+                </div>
+              </div>
+              <div data-test="col" class="col-md-3">
+                <div
+                  class="bg-white py-2 px-3 shadow rounded mt-4 dashboard-card"
+                >
+                  <div class="chartjs-size-monitor">
+                    <div class="chartjs-size-monitor-expand">
+                      <div class=""></div>
+                    </div>
+                    <div class="chartjs-size-monitor-shrink">
+                      <div class=""></div>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-2"
+                  >
+                    <span class="float-left font-weight-bold"
+                      ><span class="blue-grey-text">Month Progress</span></span
+                    ><small class="float-right text-black-50">Daily</small>
+                  </div>
+                  <canvas
+                    id="monthlyProgressChart"
+                    height="130"
+                    width="196"
+                    class="chartjs-render-monitor"
+                    style="display: block; width: 196px; height: 130px"
+                  ></canvas>
+                  <h3 class="text-center mt-1 blue-text">6,056</h3>
+                  <span class="text-center d-block mt-1 blue-gray-text"
+                    >PHP 861,056</span
+                  >
+                </div>
+              </div>
+              <div data-test="col" class="col-md-3">
+                <div
+                  class="bg-white py-2 px-3 shadow rounded mt-4 dashboard-card"
+                >
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-2"
+                  >
+                    <span class="float-left font-weight-bold"
+                      ><span class="blue-grey-text">Tasks</span></span
+                    ><small class="float-right text-black-50">Today</small>
+                  </div>
+                  <div class="content">
+                    <div data-test="table" class="">
+                      <table class="table table-borderless">
+                        <thead data-test="table-head" class=""></thead>
+                        <tbody data-test="table-body">
+                          <tr>
+                            <td class="py-1 green-text">
+                              <i class="far fa-circle" aria-hidden="true"></i>
+                            </td>
+                            <td class="py-1 green-text">Fix Design Bug</td>
+                          </tr>
+                          <tr>
+                            <td class="py-1 green-text">
+                              <i class="far fa-circle" aria-hidden="true"></i>
+                            </td>
+                            <td class="py-1 green-text">Create login page</td>
+                          </tr>
+                          <tr>
+                            <td class="py-1 green-text">
+                              <i class="far fa-circle" aria-hidden="true"></i>
+                            </td>
+                            <td class="py-1 green-text">
+                              Mobile responsiveness
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="py-1 green-text">
+                              <i
+                                class="fas fa-check-circle"
+                                aria-hidden="true"
+                              ></i>
+                            </td>
+                            <td class="py-1 grey-text line-through">
+                              Add Dashboard
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="py-1 green-text">
+                              <i
+                                class="fas fa-check-circle"
+                                aria-hidden="true"
+                              ></i>
+                            </td>
+                            <td class="py-1 grey-text line-through">
+                              Add report
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="py-1 green-text">
+                              <i
+                                class="fas fa-check-circle"
+                                aria-hidden="true"
+                              ></i>
+                            </td>
+                            <td class="py-1 grey-text line-through">
+                              Update Task Tracker
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="py-1 green-text">
+                              <i
+                                class="fas fa-check-circle"
+                                aria-hidden="true"
+                              ></i>
+                            </td>
+                            <td class="py-1 grey-text line-through">
+                              Client x project proposal
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div data-test="col" class="col-md-3">
+                <div
+                  class="bg-white py-2 px-3 shadow rounded mt-4 dashboard-card"
+                >
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <span class="float-left font-weight-bold"
+                      ><span class="blue-grey-text">Activity Feed</span></span
+                    ><small class="float-right text-black-50">Today</small>
+                  </div>
+                  <div class="content">
+                    <div class="d-flex mt-3">
+                      <img
+                        src="images/user.png"
+                        width="32px"
+                        height="32px"
+                        class="rounded-pill mx-1"
+                      />
+                      <div
+                        class="bg-info px-3 py-1 rounded align-text-start mx-1"
+                        color="info"
+                      >
+                        <small class="text-white"
+                          ><b>Vhon</b> has updated the meeting</small
+                        >
+                      </div>
+                    </div>
+                    <div class="d-flex mt-3">
+                      <img
+                        src="images/juan.png"
+                        width="32px"
+                        height="32px"
+                        class="rounded-pill mx-1"
+                      />
+                      <div
+                        class="bg-info px-3 py-1 rounded align-text-start mx-1"
+                        color="info"
+                      >
+                        <small class="text-white"
+                          ><b>Juan</b> has completed the testing</small
+                        >
+                      </div>
+                    </div>
+                    <div class="d-flex mt-3">
+                      <div
+                        class="bg-warning px-3 py-1 rounded align-text-start mx-1 own-style"
+                        color="info"
+                      >
+                        <small class="text-white"
+                          ><b>Laurence</b> has fixed display error</small
+                        >
+                      </div>
+                    </div>
+                    <div class="d-flex mt-3">
+                      <img
+                        src="images/grid.png"
+                        width="32px"
+                        height="32px"
+                        class="rounded-pill mx-1"
+                      />
+                      <div
+                        class="bg-info px-3 py-1 rounded align-text-start mx-1"
+                        color="info"
+                      >
+                        <small class="text-white"
+                          ><b>Grid</b> passed the exam</small
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
